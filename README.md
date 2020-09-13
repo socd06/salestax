@@ -1,6 +1,6 @@
 # salestax
 
-SALES TAXES PROBLEM:
+## SALES TAXES PROBLEM:
 
 Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt. Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
 
@@ -65,3 +65,21 @@ Sales Taxes: 6.70
 Total: 74.68
 
 ==========
+
+## Assumptions:
+- The input is the path to a shopping cart text
+- Books, medicine and food products are tax exempt
+- Sales tax are rounded up to the next $0.05
+
+The program reads a text file with shopping cart information then it builds a list of words related to tax-exempt products using the integrated natural language processing toolkit. After that, the content is parsed into quantity, item description and price variables. Then, the item descriptions are checked to see if they contain words from the tax-exempt list or if the item descriptions contain the "IMPORTED" word. With this information the program is able to calculate the product sales tax and round up to the next $0.05. The process is repeated through every line of text while it keeps track of the total sales tax and total amounts. Every parsed input is printed and when the file has been iterated through, the total sales tax and total amounts are printed, completing the receipt information.  
+
+## Running the program:
+With Python 3+
+
+`python script.py -i <path_to_text_file>`
+
+For example:
+
+`python script.py -i test_case1.txt`
+
+![Proof](Capture.jpg)
